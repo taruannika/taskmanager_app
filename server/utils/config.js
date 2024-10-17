@@ -10,5 +10,19 @@ const CORS_OPTIONS = {
   allowedHeaders: "Content-Type,Authorization",
   credentials: true,
 };
+const COOKIE_OPTIONS = {
+  path: "/",
+  httpOnly: true,
+  maxAge: 30 * 24 * 24 * 60 * 1000,
+  sameSite: "none",
+  secure: false,
+};
 
-module.exports = { PORT, MONGO_URI, CLIENT_URL, JWT_SECRET, CORS_OPTIONS };
+module.exports = {
+  PORT,
+  MONGO_URI,
+  CLIENT_URL,
+  JWT_SECRET,
+  CORS_OPTIONS,
+  COOKIE_OPTIONS,
+};
