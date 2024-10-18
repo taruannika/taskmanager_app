@@ -6,8 +6,6 @@ const User = require("../models/user.model");
 const protect = asyncHandler(async (req, res, next) => {
   let token;
 
-  console.log(req.cookies);
-
   // get token from headers or cookies
   if (
     req.headers.authorization &&
